@@ -1,5 +1,6 @@
 # Klein-zmk
-ZMK Firmware for Klein keyboard https://github.com/snsten/Klein
+ZMK Firmware for Klein keyboard https://github.com/snsten/Klein.
+This is an individual private fork belongs to XC. Please fork [Klein-zmk](https://github.com/snsten/Klein-zmk) to edit keymap.
 
 
 # Bluetooth Connection for Klein
