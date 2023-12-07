@@ -5,17 +5,40 @@ This is an individual private fork belongs to XC. Please fork [Klein-zmk](https:
 
 # Bluetooth Connection for Klein
 
-![Klein BLE manual](https://user-images.githubusercontent.com/79617315/227060016-6c585598-03bb-4c95-98b2-06dce468a7f8.jpg)
-
-1. For first time bluetooth connection, please refer to picture above. 
-2. After flashing new firmware, check if the Bluetooth profile connection is still active. If it's not, proceed with Step 3.
-3. Remove Klein bluetooth connection in your pc by "Remove Device" in "Bluetooth and other devices".
-4. Continue with "First Time Bluetooth Connection"..
-5. :warning: Pairing BLE ZMK keyboard is a two-way connection thingy. Always make sure you have "Remove Device" in your pc after flashing. 
-6. :sleeping_bed: Klein will automatically wake up when a key is touched/registered. If the board doesn't wake up immediately, try spamming BLE+01 (your Bluetooth profile).
+|![Klein BLE manual](https://user-images.githubusercontent.com/79617315/227060016-6c585598-03bb-4c95-98b2-06dce468a7f8.jpg)|
+|:-|
+|For first time bluetooth connection, please refer to picture above. Please test the board before flashing new firmware to avoid complicated troubleshoot process.|
 
 
-# Key Remap in ZMK 
+# Key Remap in ZMK (use Keymap Editor)
+|Tutorial|
+|:-|
+|1. Please fork [Klein-zmk](https://github.com/snsten/Klein-zmk).|
+|![image](https://github.com/superxc3/Klein-zmk/assets/79617315/0332d3da-8b21-4201-ac8a-4a7d189f27e0)|
+|2. Go to [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) to edit your keymap.|
+|3. If you are not sure, you can refer to our [Corne Key Remap](https://github.com/superxc3/zmk-config-crkbd#key-remap) for steps by steps screenshot.|
+|4. After you click LATEST, it directs you to this webpage. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
+
+## Flashing u2f to split
+1. Connect left and right splits to your pc (both connect together using type c cable)
+2. Put right into bootloader mode (press the reset button), one window is popped out. Dont do anything yet, remember this folder as right split. 
+3. Now press reset button on your left split, one window will be popped out as previous step.
+4. Drag left and right u2f to respective folders.
+5. If you dont have extra usb c cable...You can do right first, then quickly move to left so the right can sync with left.
+6. If you already tested the board before flashing, your board should be able to connect to pc without cable now.
+7. If it doesnt, try to BT Clear every bluetooth profile. Remember to forget device on your pc too. Then reconnect it.
+8. If you have any problems, please refer to session below for troubleshooting process. Alternately, you can join [ZMK discord server](https://discord.com/invite/sV4ufxFUGX) to ask for questions.
+
+## Common Issues and Troubleshooting
+1. [Mac or Window OS connected but not responding](https://zmk.dev/docs/features/bluetooth#macos-connected-but-not-working), this is working for Bluetooth 5.2 Windows.
+2. Master connected and can type, but not slave refer to [Split Keyboard Halves Unable to Pair](https://zmk.dev/docs/troubleshooting#split-keyboard-halves-unable-to-pair).
+3. You may compile the reset.uf2 yourself or get it from [setting reset.uf2](https://drive.google.com/file/d/1r3C8MBEVbgs5SK3Hc2CyoOIaiAPLB_zp/view?usp=drive_link).
+4. The board is pre-flashed with the [left.uf2](https://drive.google.com/file/d/1_m4oQixc_IZxohSQl1CkoeF752q_duMT/view?usp=drive_link) and [right.uf2](https://drive.google.com/file/d/1KWRvnbwFU581RjSXRDAvElPMlIqgQ2dC/view?usp=drive_link). You may always use these to test the board.
+5. For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS) or [here](https://drive.google.com/drive/folders/1p5twDqSFcLPDTAh1r9uKbbJ-_LQ2O5IX?usp=drive_link). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
+6. No key is registering: have you toggled the power button? (if you have one)
+
+
+# Key Remap in ZMK (traditional way)
 Guide to flash with new key map through Github actions
 1. Fork this repo
 2. Edit keymap  
@@ -66,14 +89,7 @@ You can copy the following and edit according to your needs. Just need to note t
 };
 ```
 
-# Flashing u2f to split
-1. Connect left and right splits to your pc (both connect together using type c cable)
-2. Put right into bootloader mode (press the reset button), one window is popped out showing "nicenano" folder. Dont do anything yet, remember this folder as right split. 
-3. Now press reset button on your left split, one window will be popped out as previous step.
-4. Drag left and right u2f to respective folders.
-5. Do not disconnect right split yet. 
-6. Remove left split from type c cable. Proceed to `Klein BLE manual` to connect your board to pc. If successfully connected, you shall able to type without cable now. 
-8. If so, remove the right split from type c cable. Both should be working good now!
+
 
 :star: If you like our service or products, please tell your friends and family about us so we can grow and offer more options in the future. We strive to provide comprehensive user manuals to save you time exploring our products. We welcome any suggestions you have to help us improve our boards.
 
