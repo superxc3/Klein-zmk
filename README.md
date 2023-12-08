@@ -26,16 +26,12 @@ This is an individual private fork belongs to XC. Please fork [Klein-zmk](https:
 4. Drag left and right u2f to respective folders.
 5. If you dont have extra usb c cable...You can do right first, then quickly move to left so the right can sync with left.
 6. If you already tested the board before flashing, your board should be able to connect to pc without cable now.
-7. If it doesnt, try to BT Clear every bluetooth profile. Remember to forget device on your pc too. Then reconnect it.
+7. Check your bluetooth device list, if Klein flashes "conneccted" between "paired", you have to BTCLEAR every profile. Remember to forget device on your pc too. Then reconnect it. Check [Bluetooth connection](https://github.com/superxc3/Klein-zmk/edit/main/README.md#bluetooth-connection-for-klein).
 8. If you have any problems, please refer to session below for troubleshooting process. Alternately, you can join [ZMK discord server](https://discord.com/invite/sV4ufxFUGX) to ask for questions.
 
 ## Common Issues and Troubleshooting
 1. [Mac or Window OS connected but not responding](https://zmk.dev/docs/features/bluetooth#macos-connected-but-not-working), this is working for Bluetooth 5.2 Windows.
-2. Master connected and can type, but not slave refer to [Split Keyboard Halves Unable to Pair](https://zmk.dev/docs/troubleshooting#split-keyboard-halves-unable-to-pair).
-3. You may compile the reset.uf2 yourself or get it from [setting reset.uf2](https://drive.google.com/file/d/1r3C8MBEVbgs5SK3Hc2CyoOIaiAPLB_zp/view?usp=drive_link).
-4. The board is pre-flashed with the [left.uf2](https://drive.google.com/file/d/1_m4oQixc_IZxohSQl1CkoeF752q_duMT/view?usp=drive_link) and [right.uf2](https://drive.google.com/file/d/1KWRvnbwFU581RjSXRDAvElPMlIqgQ2dC/view?usp=drive_link). You may always use these to test the board.
-5. For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS) or [here](https://drive.google.com/drive/folders/1p5twDqSFcLPDTAh1r9uKbbJ-_LQ2O5IX?usp=drive_link). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
-6. No key is registering: have you toggled the power button? (if you have one)
+2. Do I have power toggle button for Klein: No for our builds ya. Just touch to wake the board. If it does not connected, try to: tap BT1(if this is the one you connected), tap BT2 (new profile), tap BT1 again. 
 
 
 # Key Remap in ZMK (traditional way)
