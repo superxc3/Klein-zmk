@@ -19,7 +19,7 @@ This is an individual private fork belongs to XC. Please fork [Klein-zmk](https:
 |3. If you are not sure, you can refer to our [Corne Key Remap](https://github.com/superxc3/zmk-config-crkbd#key-remap) for steps by steps screenshot.|
 |4. After you click LATEST, it directs you to this webpage. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
 
-## Flashing u2f to split
+## Flashing uf2 to split
 1. Connect left and right splits to your pc (both connect together using type c cable)
 2. Put right into bootloader mode (press the reset button), one window is popped out. Dont do anything yet, remember this folder as right split. 
 3. Now press reset button on your left split, one window will be popped out as previous step.
@@ -31,8 +31,9 @@ This is an individual private fork belongs to XC. Please fork [Klein-zmk](https:
 
 ## Common Issues and Troubleshooting
 1. [Mac or Window OS connected but not responding](https://zmk.dev/docs/features/bluetooth#macos-connected-but-not-working), this is working for Bluetooth 5.2 Windows.
-2. Do I have power toggle button for Klein: No for our builds ya. Just touch to wake the board. If it does not connected, try to: tap BT1(if this is the one you connected), tap BT2 (new profile), tap BT1 again. 
-
+2. Do I have power toggle button for Klein: No for our builds ya. Just touch to wake the board. If it does not connected, try to: tap BT1(if this is the one you connected), tap BT2 (new profile), tap BT1 again.
+3. [This](https://drive.google.com/drive/folders/1_3GUFMp0BSCjuQMZ5hEts1PbZzonGxvo?usp=drive_link) is the default firmware that we used to flash your board. Please refer to [Flashing uf2 to split](https://github.com/superxc3/Klein-zmk/edit/main/README.md#bluetooth-connection-for-klein) to flash your boards. The reset button is on the mcu, please unscrew two screws on the cover (if you have one). 
+<img src="https://user-images.githubusercontent.com/79617315/227065691-f3a060b8-b526-4b9b-9ca2-a06f01eb3be2.jpg" width="700" >
 
 # Key Remap in ZMK (traditional way)
 Guide to flash with new key map through Github actions
